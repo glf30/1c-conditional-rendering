@@ -27,12 +27,17 @@ We are going to build a weather-themed React application that demonstrates condi
 
 ## Creating the App Component
 
-7. Open **/src/App.jsx**. This file is an example component that a React app starts with. You can delete everything in this file. Then, at the top of the file, you can import React and create a functional component called `App`. Finally, export it at the bottom.
-8. Write `<div className="App">Weather Conditions</div>` inside the `return` that is inside the `App` component.
-9. Let's visit the **/src/main.jsx** file and look at how we are passing our component to ReactDOM to be rendered. The line at the top of the file is importing the code from `App.jsx` so `main.jsx` has access to the `App` component.
-10. The render method of ReactDOM is being passed our `<App />` component. The `<React.StrictMode>` gives us better error reporting by activating additional checks and warnings.
-11. Save your files and visit the browser. You should see "Weather Conditions" displayed.
-12. In VS Code, go back to the file **/src/App.jsx**.
+Setup your app to look like this
+
+```jsx
+  return (
+	<div className="App container mt-5">
+	  <div className="row">
+		{/* YOUR CODE HERE */}
+	  </div>
+	</div>
+  );
+```
 
 ## Applying CSS Classes
 
@@ -44,7 +49,7 @@ We are going to build a weather-themed React application that demonstrates condi
 
 Let's create components for the three weather conditions: CloudCover, Rain, HotTemperature, and ColdTemperature.
 
-16. From the File Explorer in the left panel, **right-click** on the **/src/** folder inside your React project. Select **New File** and name the file `CloudCover.jsx`.
+16. In a new `components` folder, create a file called `CloudCover.jsx`.
 17. Create another file in the same location and name it `Rain.jsx`.
 18. Create another file in the same location and name it `HotTemperature.jsx`.
 19. Create another file in the same location and name it `ColdTemperature.jsx`.
@@ -127,133 +132,15 @@ export default ColdTemperature;
 
 ## Using let-declared Variable with if for `CloudCover`
 
-We'll use an `if` statement to conditionally render the `CloudCover` component.
-
-```jsx
-import React from 'react';
-import CloudCover from './CloudCover';
-
-function App() {
-  let cloudCover;
-  const isCloudy = true; // You can change this value to false and see what happens.
-
-  if (isCloudy) {
-    cloudCover = <CloudCover />;
-  }
-
-  return (
-    <div className="App container mt-5">
-      <div className="row">
-        {cloudCover}
-      </div>
-    </div>
-  );
-}
-
-export default App;
-```
+Use an `if` statement to conditionally render the `CloudCover` component.
 
 ## Using Short-Circuit && Evaluation for Rain
 
-We'll use logical AND (&&) to conditionally render the `Rain` component.
-
-```jsx
-import React from 'react';
-import CloudCover from './CloudCover';
-import Rain from './Rain';
-
-function App() {
-  const isCloudy = true; // You can change this value to false and see what happens.
-  let cloudCover;
-  if (isCloudy) {
-    cloudCover = <CloudCover />;
-  }
-
-  const isRainy = true; // You can change this value to false and see what happens.
-  const rain = isRainy && <Rain />;
-
-  return (
-    <div className="App container mt-5">
-      <div className="row">
-        {cloudCover}
-        {rain}
-      </div>
-    </div>
-  );
-}
-
-export default App;
-```
+Next, we'll use logical AND (&&) to conditionally render the `Rain` component.
 
 ## Using Ternary Operator for Temperature
 
-We'll use the ternary operator to conditionally render either the `HotTemperature` or `ColdTemperature` component.
-
-```jsx
-import React from 'react';
-import CloudCover from './CloudCover';
-import Rain from './Rain';
-import HotTemperature from './HotTemperature';
-import ColdTemperature from './ColdTemperature';
-
-function App() {
-  const isCloudy = true; // You can change this value to false and see what happens.
-  let cloudCover;
-  if (isCloudy) {
-    cloudCover = <CloudCover />;
-  }
-
-  const isRainy = true; // You can change this value to false and see what happens.
-  const rain = isRainy && <Rain />;
-
-  const temperature = 75; // You can change this value to see different results.
-  const tempComponent = temperature > 60 ? <HotTemperature /> : <ColdTemperature />;
-
-  return (
-    <div className="App container mt-5">
-      <div className="row">
-        {cloudCover}
-        {rain}
-        {tempComponent}
-      </div>
-    </div>
-  );
-}
-
-export default App;
-```
-
-## BONUS - Use Inline Expressions
-
-You can use inline expressions to conditionally render components. This is useful when you have a simple condition to check.
-
-We'll have to jettison the `if`, because statements are not allowed in JSX. Instead, we'll use the short-circuit `&&` operator to conditionally render the `CloudCover` component.
-
-```jsx
-import React from 'react';
-import CloudCover from './CloudCover';
-import Rain from './Rain';
-import HotTemperature from './HotTemperature';
-import ColdTemperature from './ColdTemperature';
-
-function App() {
-  const isCloudy = true; // You can change this value to false and see what happens.
-  const isRainy = true; // You can change this value to false and see what happens.
-  const temperature = 75; // You can change this value to see different results.
-
-  return (
-	<div className="App container mt-5">
-	  <div className="row">
-		{isCloudy && <CloudCover />}
-		{isRainy && <Rain />}
-		{temperature > 60 ? <HotTemperature /> : <ColdTemperature />}
-	  </div>
-	</div>
-  );
-}
-```
-
-Inline expressions are a great way to conditionally render components when you have a simple condition to check, and they can make your code more concise and easier to read. Overall, this is how conditional rendering is done in React, but you can use variables outside the return value if you find that more readable.
+We'll use the ternary operator to conditionally render either the `HotTemperature` or `ColdTemperature` component.  We'll say it's hot if it's greater than 60 degrees or else it's Cold (for all intents and purposes).
 
 ## Conclusion
 
