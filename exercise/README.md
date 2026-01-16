@@ -5,13 +5,7 @@
 We are going to build a weather-themed React application that demonstrates conditional rendering. This exercise will guide you through creating a toy app with various methods of conditional rendering to show different weather conditions like cloud cover, rain, and temperature. We'll also use Bootstrap to make our app look visually appealing.
 
 ## Set Up a New Vite Project
-
-1. Open VS Code and then open the terminal with in the `exercise` directory by right-clicking on this `readme.md` file and selecting **Open in Integrated Terminal**.
-2a. In Terminal, type `npm vite weather-conditions-app` followed by return. Here we are naming our project `weather-conditions-app`. 
-2b. It may prompt you if you want to install Vite. You can hit return, confirming first that it says `vite` and not a misspelling.
-2c. It will prompt you to "Select a Framework". Choose React.
-2d. It will prompt you to "Select a Variant". Choose JavaScript.
-3. Then open the folder in VS Code by choosing File -> Open Folder and selecting the folder `weather-conditions-app`.
+Create a new React project with `npm create vite@latest`
 
 ## Install Bootstrap
 
@@ -20,10 +14,6 @@ We are going to build a weather-themed React application that demonstrates condi
 ## Import Bootstrap
 
 5. Then in VS Code, open the **/src/main.jsx** file and import the Bootstrap CSS by typing the following line `import 'bootstrap/dist/css/bootstrap.css';`, placing it just after the import for ReactDOM and just before our import for **index.css**. This way we can override the Bootstrap styles with our own inside **index.css** if we wish to.
-
-## Start Node Test Server
-
-6. In Terminal, type `npm run dev` to start a node server. This should give you a message that the Local is **localhost:5173**. This is a clickable link to open it in your default browser, but you can go to the URL manually if you prefer.
 
 ## Creating the App Component
 
