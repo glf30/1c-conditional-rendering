@@ -9,7 +9,7 @@ Create a new React project with `npm create vite@latest`
 
 ## Install Bootstrap
 
-4. Next, let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. Launch a new terminal using Terminal -> New Terminal or using Ctrl+`. In your terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
+4. Next, let's import Bootstrap, a front-end framework that provides CSS code to make our project beautiful. Launch a new terminal using Terminal -> New Terminal or using Ctrl+. In your terminal, type `npm i bootstrap@5.2.3`. This will install the package into our project.
 
 ## Import Bootstrap
 
