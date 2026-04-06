@@ -29,12 +29,6 @@ Setup your app to look like this
   );
 ```
 
-## Applying CSS Classes
-
-13. Erase the text "Weather Conditions" from inside the `div`. Add the attribute `className="container mt-5"` inside the `<div>`.
-14. Inside the `<div>`, create another `<div>` and give it the Bootstrap class name of `row`.
-15. Add comments inside the `<div>` with the class name `row` to make a note of what will eventually go there.
-
 ## Creating Nested Components
 
 Let's create components for the three weather conditions: CloudCover, Rain, HotTemperature, and ColdTemperature.
