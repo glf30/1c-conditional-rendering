@@ -41,8 +41,6 @@ Let's create components for the three weather conditions: CloudCover, Rain, HotT
 #### CloudCover.js
 
 ```jsx
-import React from 'react';
-
 function CloudCover() {
   return (
     <div className="card text-center">
@@ -60,8 +58,6 @@ export default CloudCover;
 #### Rain.js
 
 ``` jsx
-import React from 'react';
-
 function Rain() {
   return (
     <div className="card text-center">
@@ -79,8 +75,6 @@ export default Rain;
 #### HotTemperature.js
 
 ```jsx
-import React from 'react';
-
 function HotTemperature() {
   return (
     <div className="card text-center">
