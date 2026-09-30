@@ -92,8 +92,6 @@ export default HotTemperature;
 #### ColdTemperature.js
 
 ```jsx
-import React from 'react';
-
 function ColdTemperature() {
   return (
     <div className="card text-center">
